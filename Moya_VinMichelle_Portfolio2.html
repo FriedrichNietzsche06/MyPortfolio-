@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vin Michelle Moya | Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --text: #f5f5f5;
+      --border: #444;
+      --accent: #888;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Roboto Mono', monospace;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: square inside;
+    }
+
+    header {
+      border-bottom: 2px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      position: relative;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+
+    .nav ul {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    section {
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      border: 2px solid var(--border);
+      padding: 1rem;
+      background-color: #111;
+      color: var(--text);
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 1.5rem;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .social-icons a:hover {
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 2px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        border-top: 2px solid var(--border);
+        z-index: 1000;
+      }
+
+      .nav.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        color: var(--text);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Vin Michelle Moya</div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#research">research</a></li>
+        <li><a href="#achievements">achievements</a></li>
+        <li><a href="#blog">anecdote/blog</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Hello, I'm Vin Michelle Moya.</h1>
+      <p>I'm an Artificial Intelligence Engineering student at Mapúa University, specializing in quantitative research and time-series analysis, particularly in developing predictive models for business and financial applications.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Cryptocurrency Price Forecasting Using Long Short-Term Memory (LSTM) Networks</h3>
+          <p>Developed a deep learning model using LSTM and 1D CNN layers to forecast cryptocurrency prices based on time-series data. Integrated technical indicators (e.g., RSI, MACD, Bollinger Bands) for feature enrichment and used sliding windows for sequence prediction. Applied standard scaling, log transformation, and model optimization techniques such as early stopping and learning rate scheduling to improve performance.</p>
+        </div>
+        <div class="card">
+          <h3>Arduino-Based Prototype: Flood Detection System Using Ultrasonic and Soil Moisture Sensors</h3>
+          <p>Developed a flood detection prototype using Arduino, ultrasonic sensors, and a soil moisture sensor to detect rising water levels and ground saturation. The system provides real-time visual alerts using red and green LED indicators to signal potential flood conditions..</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <ul>
+        <li><strong>Publication Title</strong> — Journal Name, Year</li>
+        <li><strong>Another Paper</strong> — Conference Name, Year</li>
+      </ul>
+    </section>
+
+    <section id="achievements">
+      <h2>Academic Achievements</h2>
+      <ul>
+        <li>B.S. in Artificial Intelligence Engineering, Mapúa University (2025–20XX)</li>
+        <li>STEM Senior High School Diploma, Mapúa University (2023–2025)</li>
+        <li>Junior High School Diploma, Samar Colleges Inc. (2019–2023)</li>
+      </ul>
+    </section>
+
+    <section id="blog">
+      <h2>Anecdote/Blog</h2>
+      <p><strong>Coming Soon:</strong> A personal story or reflection will be shared here. Stay tuned for insights, experiences, or lessons learned on my journey in AI engineering and beyond.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <strong>Emails:</strong><br>
+        <a href="mailto:vinmichellemoya@outlook.com">vinmichellemoya@outlook.com</a><br>
+        <a href="mailto:vinmichellemoya@gmail.com">vinmichellemoya@gmail.com</a>
+      </p>
+      <p>
+        <strong>Contact No.:</strong><br>
+        <a href="tel:+639176229491">+63 917 622 9491</a>
+      </p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/vinmichelle.moya.5/" target="_blank">Facebook</a>
+        <a href="https://github.com/FriedrichNietzsche06" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/georgwilhelmfriedrichhegel06/">Instagram</a>
+        <a href="https://x.com/gwf_hegel2006"_blank">X (Formerly Twitter)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vin Michelle Moya. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
+
